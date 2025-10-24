@@ -20,6 +20,7 @@
             bookmarkBtn.src = chrome.runtime.getURL("assets/bookmark.png");
             bookmarkBtn.className = "ytp-button " + "bookmark-btn";
             bookmarkBtn.title = "Click to bookmark current timestamp";
+            // yes
 
         }
     }
