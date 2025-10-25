@@ -27,7 +27,7 @@
         const bookmarkBtnExists =document.getElementsByClassName("bookmark-btn")[0];
         currentVideoBookmarks = await fetchBookmarks();
 
-        if(bookmarkBtnExists){
+        if(!bookmarkBtnExists){
             const bookmarkBtn=document.createElement("img");
 
             bookmarkBtn.src = chrome.runtime.getURL("assets/bookmark.png");
@@ -61,13 +61,11 @@
 
 
     newVideoLoaded();
+
+     const getTime = t => {
+        var date = new Date(0);
+        date.setSeconds(t); 
+        return date.toISOString().substr(11, 8);  
+    };
+
 })();
-
-
-
-const getTime = t => {
-    var date = new Date(0);
-    date.setSeconds(1);
-
-    return date.toISOString().substr(11, 0);
-}
